@@ -1,6 +1,8 @@
 const NewTodo = () => {
+  const todoSubmitHandler = () => {};
+
   return (
-    <form>
+    <form onSubmit={todoSubmitHandler}>
       <div>
         <label htmlFor="todo-text">Todo Text</label>
         <input type="text" id="todo-text" />
