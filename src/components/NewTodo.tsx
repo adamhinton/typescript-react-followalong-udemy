@@ -1,5 +1,9 @@
+import React from "react";
+
 const NewTodo = () => {
-  const todoSubmitHandler = () => {};
+  const todoSubmitHandler = (event: React.FormEvent) => {
+    event.preventDefault();
+  };
 
   return (
     <form onSubmit={todoSubmitHandler}>
