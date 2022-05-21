@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import "./NewTodo.css";
+
 // we need to get what the user inputs. We can use that with state, or useRef to extract what user submitted.
 // We'll use useRef.
 
@@ -21,7 +23,7 @@ const NewTodo: React.FC<NewTodoProps> = (props) => {
 
   return (
     <form onSubmit={todoSubmitHandler}>
-      <div>
+      <div className="form-control">
         <label htmlFor="todo-text">Todo Text</label>
         <input type="text" id="todo-text" ref={textInputRef} />
       </div>
