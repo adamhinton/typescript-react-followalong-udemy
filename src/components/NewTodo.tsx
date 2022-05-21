@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 // We'll use useRef.
 
 const NewTodo = () => {
-  const textInputRef = useRef();
+  const textInputRef = useRef<HTMLInputElement>(null);
 
   const todoSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
