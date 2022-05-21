@@ -13,7 +13,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <NewTodo />
+      <NewTodo onAddTodo={todoAddHandler} />
       <TodoList items={todos} />
     </div>
   );

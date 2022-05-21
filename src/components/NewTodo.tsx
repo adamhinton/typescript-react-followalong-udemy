@@ -2,7 +2,14 @@ import React, { useRef } from "react";
 // we need to get what the user inputs. We can use that with state, or useRef to extract what user submitted.
 // We'll use useRef.
 
-const NewTodo = () => {
+// we would more typically use an interface here
+type NewTodoProps = {
+  onAddTodo: (todoText: string) => {
+    void;
+  };
+};
+
+const NewTodo = (props) => {
   // the null is because it's null when page loads
   const textInputRef = useRef<HTMLInputElement>(null);
 
@@ -11,6 +18,7 @@ const NewTodo = () => {
     // the ! tells TS that this can be null, that's what it is on load
     const enteredText = textInputRef.current!.value;
     console.log("enteredText:", enteredText);
+    props.onAddTodo(enteredText);
   };
 
   return (
