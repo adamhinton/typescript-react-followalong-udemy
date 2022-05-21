@@ -8,7 +8,8 @@ const NewTodo = () => {
 
   const todoSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
-    const enteredText = textInputRef.current.value;
+    // the ! tells TS that this can be null, that's what it is on load
+    const enteredText = textInputRef.current!.value;
   };
 
   return (
