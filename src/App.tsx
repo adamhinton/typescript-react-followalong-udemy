@@ -5,10 +5,11 @@ import NewTodo from "./components/NewTodo";
 // Now this has to return a functional component
 // would fail without a return stmt frex
 const App: React.FC = () => {
-  const [todos, setTodos] = useState([]);
+  // telling TS to expect an array of these objects
+  const [todos, setTodos] = useState<{ id: string; text: string }[]>([]);
 
   const todoAddHandler = (text: string) => {
-    console.log("text:", text);
+    setTodos([{ id: Math.random().toString(), text: text }]);
   };
 
   return (
