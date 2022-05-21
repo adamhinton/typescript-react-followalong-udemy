@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 // We'll use useRef.
 
 const NewTodo = () => {
+  // the null is because it's null when page loads
   const textInputRef = useRef<HTMLInputElement>(null);
 
   const todoSubmitHandler = (event: React.FormEvent) => {
