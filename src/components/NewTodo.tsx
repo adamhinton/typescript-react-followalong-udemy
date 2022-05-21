@@ -4,9 +4,7 @@ import React, { useRef } from "react";
 
 // we would more typically use an interface here
 type NewTodoProps = {
-  onAddTodo: (todoText: string) => {
-    void;
-  };
+  onAddTodo: (todoText: string) => void;
 };
 
 const NewTodo: React.FC<NewTodoProps> = (props) => {
