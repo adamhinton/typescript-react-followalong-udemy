@@ -11,6 +11,7 @@ const TodoList: React.FC<TodoListProps> = (props) => {
         return (
           <li key={todo.id}>
             <span>{todo.text}</span>
+            <button>DELETE</button>
           </li>
         );
       })}
