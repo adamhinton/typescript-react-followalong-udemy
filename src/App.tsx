@@ -12,7 +12,9 @@ const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
   const todoAddHandler = (text: string) => {
-    setTodos([{ id: Math.random().toString(), text: text }]);
+    // This fxnality is supported by React, passes in the current State
+    // This is best practice
+    setTodos((prevTodos) => []);
   };
 
   return (
