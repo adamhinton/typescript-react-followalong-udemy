@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const NewTodo = () => {
   const todoSubmitHandler = (event: React.FormEvent) => {
