@@ -8,7 +8,11 @@ const TodoList: React.FC<TodoListProps> = (props) => {
   return (
     <ul>
       {props.items.map((todo) => {
-        return <li key={todo.id}>{todo.text}</li>;
+        return (
+          <li key={todo.id}>
+            <span>{todo.text}</span>
+          </li>
+        );
       })}
     </ul>
   );
