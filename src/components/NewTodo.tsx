@@ -10,6 +10,7 @@ const NewTodo = () => {
     event.preventDefault();
     // the ! tells TS that this can be null, that's what it is on load
     const enteredText = textInputRef.current!.value;
+    console.log("enteredText:", enteredText);
   };
 
   return (
