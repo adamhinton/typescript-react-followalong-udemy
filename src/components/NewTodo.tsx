@@ -9,7 +9,7 @@ type NewTodoProps = {
   };
 };
 
-const NewTodo = (props) => {
+const NewTodo: React.FC<NewTodoProps> = (props) => {
   // the null is because it's null when page loads
   const textInputRef = useRef<HTMLInputElement>(null);
 
