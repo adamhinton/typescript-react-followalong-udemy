@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+// we need to get what the user inputs. We can use that with state, or useRef to extract what user submitted.
+// We'll use useRef.
 
 const NewTodo = () => {
   const todoSubmitHandler = (event: React.FormEvent) => {
