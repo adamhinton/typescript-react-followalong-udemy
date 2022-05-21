@@ -12,7 +12,9 @@ const TodoList: React.FC<TodoListProps> = (props) => {
         return (
           <li key={todo.id}>
             <span>{todo.text}</span>
-            <button onClick={}>DELETE</button>
+            <button onClick={props.onDeleteTodo.bind(null, todo.id)}>
+              DELETE
+            </button>
           </li>
         );
       })}
